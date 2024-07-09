@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Open House Invitation</title>
+<style>
+    body{
+        height: 100%;
+        margin: 0;
+        display: flex;
+        background-image:url('raya.jfif');
+        align-items: center;
+        justify-content: center;
+
+    }
+    .form-container {
+        width:40%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10pxrgba(0, 0, 0, 0.1); /* optional shadow for better appearance */
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        flex-direction: column;
+        
+    }
+    h1 {
+        margin-bottom: 10px; /* Space below the title */
+        color: #333; /* Dark text color */
+        
+    }
+    table {
+        border-collapse: collapse; /* optional to remove border gaps */
+        width:100%; /* Full width */
+        height:50%;
+        background-color: #fff; /* White background for the table */
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Ensure rounded corners are visible */
+        
+    }
+    td {
+        padding: 10px; /* Increase padding */
+        text-align: left; /* Left-align text */
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray background for even rows */
+    }
+
+    input[type="text"], textarea {
+        width: 100%; /* Full width */
+        padding: 10px; /* Padding inside input fields */
+        margin: 5px 0; /* Margin between input fields */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        border: 1px solid #ccc; /* Border color */
+        border-radius: 5px; /* Rounded corners */
+    }
+    input[type="submit"], input[type="reset"] {
+        background-color: #D2B48C; /* Light brown background */
+        color: white; /* White text */
+        border: none; /* No border */
+        padding: 10px 10px; /* Padding */
+        margin: 10px 5px; /* Margin */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: #B8860B; /* Darker shade of brown on hover */
+    }
+    .audio-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; 
+    }
+    .gif-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Optional margin for spacing */
+        margin-right:-50px;
+        margin-left:50px;
+    }
+    .gif-container img {
+        width: 200px; /* Set your desired width */
+        height: auto;  /* Maintain aspect ratio */
+    }
+</style>
+</head>
+<body>
+<div class="form-container">
+
+<form action="selamat.jsp" method=post>
+<table border=1>
+<h1>Invitation to our Open House</h1>
+<tr><td>Name :</td><td><input type=text name=name></td></tr>
+<tr><td>Age :</td><td><input type=text name=age></td></tr>
+<tr><td>Address :</td><td><textarea name=address rows=5 cols=15></textarea></td></tr>
+<tr><td>Gender:</td><td><input type=radio name=gender value=Male>Male 
+<input type=radio name=gender value=Female>Female</td></tr>
+<tr><td>Favourite colour:</td><td><input type=checkbox name=colour value=Purple>Purple
+<input type=checkbox name=colour value=Pink>Pink<br>
+<input type=checkbox name=colour value="Navy Blue">Navy Blue
+<input type=checkbox name=colour value=Black>Black</td></tr>
+<tr><td>Attendance status :</td><td><select name=status>
+<option value=Yes>Yes
+<option value=No>No
+</select></td></tr>
+<tr><td><input type=submit value=Submit>
+<input type=reset value=Reset></td></tr>
+</table>
+</form>
+<div class="audio-container">
+<audio controls autoplay>
+  <source src="laguraya.mp3" type="audio/mpeg">
+  </audio>
+</div>
+</div>
+<div class="gif-container">
+        <img src="giphy3.gif" alt="Invitation GIF">
+    </div>
+</body>
+</html>
